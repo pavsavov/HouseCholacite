@@ -1,8 +1,8 @@
 import React from 'react';
-import { Container } from 'reactstrap';
-import { NavMenu } from './NavMenu';
+import { Container } from '@material-ui/core';
+import { NavMenu } from './Navigation/NavMenu';
 
-function Layout(props) {
+const Layout = (props) => {
     return (
         <div>
             <NavMenu />

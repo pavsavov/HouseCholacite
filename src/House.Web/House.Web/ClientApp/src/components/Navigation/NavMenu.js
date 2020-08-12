@@ -16,7 +16,7 @@ function NavMenu() {
                                 <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} className="text-dark" to="/contact-us">Contact Us</NavLink>
+                                <NavLink tag={Link} className="text-dark" to="/contact-us">Връзка с нас</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
