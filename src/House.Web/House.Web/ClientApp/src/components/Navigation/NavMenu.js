@@ -13,13 +13,16 @@ function NavMenu() {
                     <Collapse className="d-sm-inline-flex flex-sm-row-reverse" navbar>
                         <ul className="navbar-nav flex-grow">
                             <NavItem>
-                                <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
+                                <NavLink tag={Link} className="text-dark" to="/">Начало</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink tag={Link} className="text-dark" to="/contact-us">Връзка с нас</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
+                                <NavLink tag={Link} className="text-dark" to="/gallery">Галерия</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink tag={Link} className="text-dark" to="/rooms">Стаи</NavLink>
                             </NavItem>
                         </ul>
                     </Collapse>
