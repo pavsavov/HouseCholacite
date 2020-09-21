@@ -3,7 +3,7 @@ import { Route } from 'react-router';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
-import { ContactUs } from './components/ContactUs';
+import { ContactUs } from './components/Form/ContactUs';
 
 import './custom.css'
 

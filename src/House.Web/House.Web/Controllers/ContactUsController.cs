@@ -13,8 +13,6 @@ namespace House.Web.Controllers
     [Route("contact-us")]
     public class ContactUsController : ControllerBase
     {
-
-
         public ContactUsController()
         {
 
