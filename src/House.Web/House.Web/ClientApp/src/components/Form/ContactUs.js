@@ -48,24 +48,24 @@ const ContactUs = () => {
                         </Grid>
 
                         <form>
-            <Grid item>
-                <TextField label="Име и Фамилия" className={classes.styleTextField} />
-            </Grid>
-            <Grid item>
-                <TextField label="Телефон за връзка" className={classes.styleTextField} />
-            </Grid>
-            <Grid item>
-                <TextField label="Електронна поща" className={classes.styleTextField} />
-            </Grid>
-            <Grid item>
-                <TextareaAutosize id="" label="Съобщение" placeholder="Пишете ни..." className={classes.textArea} />
-            </Grid>
-            <Grid item>
-                <Button variant="contained" color="primary" className={classes.buttonStyle}>
-                    Бутон
-    </Button>
-            </Grid>
-        </form>
+                            <Grid item>
+                                <TextField label="Име и Фамилия" className={classes.styleTextField} />
+                            </Grid>
+                            <Grid item>
+                                <TextField label="Телефон за връзка" className={classes.styleTextField} />
+                            </Grid>
+                            <Grid item>
+                                <TextField label="Електронна поща" className={classes.styleTextField} />
+                            </Grid>
+                            <Grid item>
+                                <TextareaAutosize id="" label="Съобщение" placeholder="Пишете ни..." className={classes.textArea} />
+                            </Grid>
+                            <Grid item>
+                                <Button variant="contained" color="primary" className={classes.buttonStyle}>
+                                    Бутон
+                                </Button>
+                            </Grid>
+                        </form>
 
                     </Grid>
                     <Grid container justify="center">
