@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button, TextField, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import TextareaAutosize from '@material-ui/core/TextareaAutosize'
-// import {ComposedForm} from './ComposedForm'
+import { Form } from './Form'
+import {Map} from '../HEREMap/Map'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -39,40 +39,37 @@ const ContactUs = () => {
                         <Typography>
                             Контакти
                       </Typography>
-                    </Grid>
-                    <Grid item>
                         <Grid>
                             <Typography>
-                                Къща за гости Чолаците
-                           </Typography>
+                                Адрес:
+                                {/* Some addres */}
+                            </Typography>
+                            <Typography>
+                                Телефон:
+                                {/* Work Phone */}
+                            </Typography>
+                            <Typography>
+                                GPS Координати:
+                                {/* Latitude
+                                Longtitude */}
+                            </Typography>
                         </Grid>
-
-                        <form>
-                            <Grid item>
-                                <TextField label="Име и Фамилия" className={classes.styleTextField} />
-                            </Grid>
-                            <Grid item>
-                                <TextField label="Телефон за връзка" className={classes.styleTextField} />
-                            </Grid>
-                            <Grid item>
-                                <TextField label="Електронна поща" className={classes.styleTextField} />
-                            </Grid>
-                            <Grid item>
-                                <TextareaAutosize id="" label="Съобщение" placeholder="Пишете ни..." className={classes.textArea} />
-                            </Grid>
-                            <Grid item>
-                                <Button variant="contained" color="primary" className={classes.buttonStyle}>
-                                    Бутон
-                                </Button>
-                            </Grid>
-                        </form>
-
+                    </Grid>
+                    <Grid item xs={4}>
+                        <Typography>
+                            Къща за гости Чолаците
+                           </Typography>
+                        {/* //Form component */}
+                        <Form style={classes} />
                     </Grid>
                     <Grid container justify="center">
                         <Grid item>
                             <Typography>
-                                Map of location and gps coordinates
+                                Местоположение
                             </Typography>
+                        </Grid>
+                        <Grid item>
+                            <Map/>
                         </Grid>
                     </Grid>
                 </Grid>
