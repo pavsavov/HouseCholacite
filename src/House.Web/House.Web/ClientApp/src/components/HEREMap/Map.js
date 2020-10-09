@@ -20,14 +20,14 @@ const Map = () => {
         const H = window.H;
 
         const platform = new H.service.Platform({
-            apikey: "qKYB9KwXJH46COwhgJyo44R9sGVg5nQ2v6LF6NDRY9I"
+            apikey: "aWtUZLDYtl28CPUFS3UiBqSPYsMcLefOo5zt3NeUW6c"
         });
 
         const defaultLayers = platform.createDefaultLayers();
 
         const hMap = new H.Map(mapRef.current, defaultLayers.vector.normal.map, {
             center: position,
-            zoom: 7,
+            zoom: 17,
             pixelRation: window.devicePixelRatio || 1
         });
 
@@ -44,8 +44,9 @@ const Map = () => {
         }
     }, [mapRef])
 
+    //use only pixels for setting up height and width
     return (
-        <div className="map" ref={mapRef} style={{ height: "500px" }} />
+        <div className="map" ref={mapRef} style={{ height: "400px", width:'400px' }} />
     );
 }
 
