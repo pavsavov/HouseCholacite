@@ -10,8 +10,8 @@ const Map = () => {
 
     useLayoutEffect(() => {
         const position = {
-            lat: 42.67105,
-            lng: 23.35018
+            lat: 42.857570, 
+            lng: 25.015018
         };
 
         if (!mapRef.current) {
@@ -25,9 +25,9 @@ const Map = () => {
 
         const defaultLayers = platform.createDefaultLayers();
 
-        const hMap = new H.Map(mapRef.current, defaultLayers.vector.normal.map, {
+        const hMap = new H.Map(mapRef.current, defaultLayers.raster.normal.map, {
             center: position,
-            zoom: 17,
+            zoom: 14,
             pixelRation: window.devicePixelRatio || 1
         });
 
@@ -46,7 +46,7 @@ const Map = () => {
 
     //use only pixels for setting up height and width
     return (
-        <div className="map" ref={mapRef} style={{ height: "400px", width:'400px' }} />
+        <div className="map" ref={mapRef} style={{ height: "350px", width:'700px' }} />
     );
 }
 
