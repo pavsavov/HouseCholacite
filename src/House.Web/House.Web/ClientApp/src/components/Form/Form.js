@@ -8,19 +8,37 @@ const Form = (props) => {
         <form>
             <Grid container direction="column">
                 <Grid item>
-                    <TextField label="Име и Фамилия" className={props.style.styleTextField} />
+                    <TextField
+                        label="Име и Фамилия"
+                        className={props.style.styleTextField}
+                    />
                 </Grid>
                 <Grid item>
-                    <TextField label="Телефон за връзка" className={props.style.styleTextField} />
+                    <TextField
+                        label="Телефон за връзка"
+                        className={props.style.styleTextField}
+                    />
                 </Grid>
                 <Grid item>
-                    <TextField label="Електронна поща" className={props.style.styleTextField} />
+                    <TextField
+                        label="Електронна поща"
+                        className={props.style.styleTextField}
+                    />
                 </Grid>
                 <Grid item>
-                    <TextareaAutosize id="" label="Съобщение" placeholder="Пишете ни..." className={props.style.textArea} />
+                    <TextareaAutosize
+                        rowsMin={6}
+                        label="Съобщение"
+                        placeholder="Пишете ни..."
+                        className={props.style.textArea}
+                    />
                 </Grid>
                 <Grid item>
-                    <Button variant="contained" color="primary" className={props.style.buttonStyle}>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        className={props.style.buttonStyle}
+                    >
                         Бутон
                    </Button>
                 </Grid>

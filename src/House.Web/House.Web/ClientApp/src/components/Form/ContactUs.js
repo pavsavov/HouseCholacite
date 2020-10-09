@@ -59,15 +59,14 @@ const ContactUs = () => {
                         <Typography>
                             Къща за гости Чолаците
                            </Typography>
-                        {/* //Form component */}
                         <Form style={classes} />
                     </Grid>
                     <Grid container justify="center">
-                        <Grid item>
+                      
                             <Typography>
                                 Местоположение
                             </Typography>
-                        </Grid>
+                     
                         <Grid item>
                             <Map />
                         </Grid>

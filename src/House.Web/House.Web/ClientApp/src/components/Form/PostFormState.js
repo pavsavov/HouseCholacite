@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FetchData() {
+function PostFormState() {
     return (
         <div>
             <h1>Hello, Fetch data!</h1>
@@ -8,4 +8,4 @@ function FetchData() {
     );
 }
 
-export { FetchData }
+export { PostFormState }
