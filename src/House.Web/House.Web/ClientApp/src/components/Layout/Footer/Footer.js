@@ -1,9 +1,9 @@
 import { Grid, makeStyles, Typography } from '@material-ui/core';
 import { grey } from '@material-ui/core/colors';
 import React from 'react';
-import { NavigationEndPoints } from '../Navigation/NavigationEndPoints';
+import { NavigationEndPoints } from '../../Navigation/NavigationEndPoints';
 import Box from '@material-ui/core/Box';
-import { position } from '../../common/constants';
+import { position } from '../../../common/constants';
 
 const defaultProps = {
   direction: 'row',

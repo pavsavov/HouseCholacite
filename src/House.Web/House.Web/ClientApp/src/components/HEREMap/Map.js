@@ -44,7 +44,7 @@ const Map = () => {
     };
   }, [mapRef]);
 
-  //use only pixels for setting up height and width
+  //here api works only with pixels for setting up height and width
   return (
     <div
       className='map'

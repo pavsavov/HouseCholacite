@@ -47,7 +47,9 @@ const ContactUs = () => {
               <Typography>
                 GPS Координати:
                 {/* Latitude
-                 Longtitude */}
+                 Longtitude
+                 use constans.js where are the coordinates
+                 */}
               </Typography>
             </Grid>
           </Grid>

@@ -6,6 +6,11 @@ const NavigationEndPoints = () => {
   return (
     <ul className='navbar-nav flex-grow'>
       <NavItem>
+        <NavLink tag={Link} className='text-dark' to='/about-us'>
+          За къщата
+        </NavLink>
+      </NavItem>
+      <NavItem>
         <NavLink tag={Link} className='text-dark' to='/'>
           Начало
         </NavLink>

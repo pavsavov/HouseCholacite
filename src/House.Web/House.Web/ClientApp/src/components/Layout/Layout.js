@@ -1,20 +1,21 @@
 import React from 'react';
-import { Container, makeStyles } from '@material-ui/core';
-import { NavMenu } from './Navigation/NavMenu';
+import { makeStyles } from '@material-ui/core';
+import { Header } from './Header/Header';
 import { Footer } from './Footer/Footer';
+import { Body } from './Body/Body';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   footerContainer: {
-    minHeight: '100vh',
+    // position: 'absolute',
   },
 }));
+
 const Layout = (props) => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      {/* NavMenu is actually header. Need to decompose it in smaller components */}
-      <NavMenu />
-      <Container>{props.children}</Container>
+      <Header />
+      <Body children={props.children} />
       <div className={classes.footerContainer}>
         <Footer />
       </div>
