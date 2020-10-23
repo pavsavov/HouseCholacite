@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
 import { Home } from '../Home/Home';
-import { ContactUs } from '../Form/ContactUs';
+import { ContactUs } from '../ContactUs/ContactUs';
 
-const RouterRegister = () => {
+const RouteRegister = () => {
   return (
     <Switch>
       <Route exact path='/' component={Home} />
@@ -23,4 +23,4 @@ const RouterRegister = () => {
   );
 };
 
-export { RouterRegister };
+export { RouteRegister };

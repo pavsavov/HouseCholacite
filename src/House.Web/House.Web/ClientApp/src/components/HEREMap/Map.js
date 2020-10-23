@@ -49,7 +49,7 @@ const Map = () => {
     <div
       className='map'
       ref={mapRef}
-      style={{ height: '350px', width: '700px' }}
+      style={{ height: '350px', width: '700px', display: 'flex' }}
     />
   );
 };

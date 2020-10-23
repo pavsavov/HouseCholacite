@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     margin: theme.spacing(4),
   },
+  mapContainer: {
+    position: 'relative',
+  },
 }));
 
 const ContactUs = () => {
@@ -59,12 +62,14 @@ const ContactUs = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid container justify='center'>
-        <Grid item xs={4}>
-          <Typography>Местоположение</Typography>
-          <Map />
+      <div className={classes.mapContainer}>
+        <Grid container justify='center'>
+          <Grid item xs={4}>
+            <Typography>Местоположение</Typography>
+            <Map />
+          </Grid>
         </Grid>
-      </Grid>
+      </div>
     </div>
   );
 };

@@ -1,13 +1,22 @@
 import React from 'react';
-import { isPropertySignature } from 'typescript';
 import { Layout } from './components/Layout/Layout';
-import { RouterRegister } from './components/Router/Router';
+import { RouteRegister } from './components/Router/RouteRegister';
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+    margin: '0 auto',
+  },
+}));
 
 const App = (props) => {
+  const classes = useStyles();
   return (
-    <Layout children={props.children}>
-      <RouterRegister />
-    </Layout>
+    <div className={classes.container}>
+      <Layout>
+        <RouteRegister />
+      </Layout>
+    </div>
   );
 };
 

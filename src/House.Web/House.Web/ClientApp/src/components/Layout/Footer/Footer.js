@@ -13,17 +13,23 @@ const defaultProps = {
 
 const useStyles = makeStyles((theme) => ({
   root: {},
-  mainFooter: {
-    display: 'flex',
-    justifyContent: 'center',
+  footerContainer: {
+    marginTop: '1rem',
+    position: 'flex',
+    left: '0',
+    bottom: '0',
+    right: '0',
+  },
+  mainFooterStyle: {
     backgroundColor: grey[100],
-    width: '100%',
-    // position: 'relative',
   },
   botomFooter: {
     display: 'flex',
     justifyContent: 'left',
     alignContent: 'center',
+  },
+  contentContainer: {
+    marginTop: '1rem',
   },
   listElementStyle: {
     listStyleType: 'none',
@@ -34,16 +40,24 @@ const Footer = () => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <footer className={classes.mainFooter}>
+    <div className={classes.footerContainer}>
+      <footer className={classes.mainFooterStyle}>
         <Grid container {...defaultProps}>
           <Grid item>
-            <Grid container direction='column'>
+            <Grid
+              container
+              className={classes.contentContainer}
+              direction='column'
+            >
               <NavigationEndPoints />
             </Grid>
           </Grid>
           <Grid item>
-            <Grid container direction='column'>
+            <Grid
+              container
+              className={classes.contentContainer}
+              direction='column'
+            >
               <ul className={classes.listElementStyle}>
                 <h5>Контакти:</h5>
                 <li>телефон: 123456</li>
@@ -58,7 +72,7 @@ const Footer = () => {
           </Grid>
           {/* need some more civilised meaning to get instagram an facebok icons
             appart */}
-          <Grid item>
+          <Grid item className={classes.contentContainer}>
             <h5>Социални мрежи</h5>
             <Grid container direction='row'>
               <Box>instagram</Box>
@@ -75,7 +89,7 @@ const Footer = () => {
           | Общи условия | Лични данни
         </Grid>
       </Box>
-    </React.Fragment>
+    </div>
   );
 };
 
