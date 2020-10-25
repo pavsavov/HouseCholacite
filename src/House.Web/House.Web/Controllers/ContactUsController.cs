@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using House.Web.Models;
+﻿using System.Threading.Tasks;
+using House.Web.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace House.Web.Controllers
 {
     [ApiController]
     [AllowAnonymous]
-    [Route("contact-us")]
+    [Route("api/contact-us")] 
     public class ContactUsController : ControllerBase
     {
+        //contactUsservice private field
+        //Emailservice private field
         public ContactUsController()
         {
 
@@ -24,10 +22,17 @@ namespace House.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest();
+             return   RedirectToAction("/", "HomeController");
             }
+
+            //create newCOntact.If success
+            //contactUsService.CreateContact()
+
+            //send email to Admin and Customer as confirmation
+            //EmailService.SendEmail()
+
             //save to db incomming data
-            
+           return RedirectToAction("/", "HomeController");
         }
     }
 }
