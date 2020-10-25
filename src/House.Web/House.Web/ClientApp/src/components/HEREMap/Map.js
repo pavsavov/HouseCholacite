@@ -10,8 +10,6 @@ const Map = () => {
   const mapRef = useRef(null);
 
   useLayoutEffect(() => {
-    //should be part of a configuration file or a const
-
     if (!mapRef.current) {
       return;
     }
@@ -49,7 +47,11 @@ const Map = () => {
     <div
       className='map'
       ref={mapRef}
-      style={{ height: '350px', width: '700px', display: 'flex' }}
+      style={{
+        height: '350px',
+        width: '700px',
+        display: 'flex',
+      }}
     />
   );
 };

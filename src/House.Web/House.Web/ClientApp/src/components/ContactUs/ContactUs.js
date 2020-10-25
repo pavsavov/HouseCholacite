@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
 const ContactUs = () => {
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <Grid container spacing={4} direction='column'>
