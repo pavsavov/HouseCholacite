@@ -1,4 +1,7 @@
-﻿using House.Web.Models.ViewModels;
+﻿using House.Web.DataAccess;
+using House.Web.Models.EntityModels;
+using House.Web.Models.ViewModels;
+using System;
 using System.Threading.Tasks;
 
 namespace House.Web.Services
@@ -6,19 +9,21 @@ namespace House.Web.Services
     public class ContactUsService : IContactUsService
     {
         //add db private field
-        public ContactUsService()
-        {
+        private readonly AppDbContext context;
 
+        public ContactUsService(AppDbContext context)
+        {
+            this.context = context;
         }
 
-        public Task<bool> CreateContact(ContactUsViewModel viewModel)
-        {
-            throw new System.NotImplementedException();
-        }
 
-        public Task<bool> GetContactByEmail(string email)
+        public async Task<Contact> CreateContactAsync(ContactUsViewModel viewModel)
         {
-            throw new System.NotImplementedException();
+            var contact = new Contact();
+
+            var result = await contact.CreateAsync(viewModel.FirstName, viewModel.LastName, viewModel.Email, viewModel.PhoneNumber, viewModel.Message, this.context);
+
+            return result;
         }
     }
 }

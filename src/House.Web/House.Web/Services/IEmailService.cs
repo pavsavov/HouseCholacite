@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace House.Web.Services
 {
-    interface IEmailService
+    public interface IEmailService
     {
         Task<bool> SendToAdmin(ContactUsViewModel viewModel);
 

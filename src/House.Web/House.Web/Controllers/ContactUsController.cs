@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using House.Web.Models.ViewModels;
+using House.Web.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,14 +8,15 @@ namespace House.Web.Controllers
 {
     [ApiController]
     [AllowAnonymous]
-    [Route("api/contact-us")] 
+    [Route("api/contact-us")]
     public class ContactUsController : ControllerBase
     {
-        //contactUsservice private field
-        //Emailservice private field
-        public ContactUsController()
-        {
+        private readonly IContactUsService contactUsService;
+        private readonly IEmailService emailService;
 
+        public ContactUsController(IContactUsService contactUsService, IEmailService emailService)
+        {
+            this.contactUsService = contactUsService;
         }
 
         [HttpPost]
@@ -22,17 +24,29 @@ namespace House.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-             return   RedirectToAction("/", "HomeController");
+                return RedirectToAction("/", "HomeController");
             }
 
+            var createdContactRecord = await this.contactUsService.CreateContactAsync(viewmodel);
+
+            if (createdContactRecord is null)
+            {
+                return this.Ok(createdContactRecord);
+            }
             //create newCOntact.If success
             //contactUsService.CreateContact()
 
             //send email to Admin and Customer as confirmation
+
+
+            //return this.CreatedAtRoute("GetBook", new { id = book.Id }, book);?????
+            
             //EmailService.SendEmail()
 
             //save to db incomming data
-           return RedirectToAction("/", "HomeController");
+            return RedirectToAction("/", "HomeController");
         }
+
+        //Add error handling page
     }
 }
