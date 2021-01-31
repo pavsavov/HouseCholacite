@@ -1,6 +1,7 @@
 ﻿using House.Web.DataAccess;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using House.Web.Services;
 
 namespace House.Web.Infrastructure.Extensions
 {
@@ -20,7 +21,9 @@ namespace House.Web.Infrastructure.Extensions
            
             //Register Db access dependencies
             services.AddSingleton<IAppDbConfiguration, AppDbConfiguration>();
-            services.AddSingleton(typeof(AppDbContext));
+            //services.AddSingleton(typeof(AppDbContext));
+
+            services.AddTransient<IContactUsService, ContactUsService>();
 
             return services;
         }
