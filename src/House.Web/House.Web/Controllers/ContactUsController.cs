@@ -8,35 +8,31 @@ namespace House.Web.Controllers
 {
     [ApiController]
     [AllowAnonymous]
-    [Route("api")]
+    [Route("api/contact-us")]
     public class ContactUsController : ControllerBase
     {
         private readonly IContactUsService contactUsService;
         private readonly IEmailService emailService;
 
-        //public ContactUsController(IContactUsService contactUsService, IEmailService emailService)
-        //{
-        //    this.contactUsService = contactUsService;
-        //}
-        public ContactUsController()
+        public ContactUsController(IContactUsService contactUsService, IEmailService emailService)
         {
+            this.contactUsService = contactUsService;
         }
 
-
-        [HttpPost("contact-us")]
+        [HttpPost]
         public async Task<IActionResult> ContactUs([FromBody] ContactUsViewModel viewmodel)
         {
             if (!ModelState.IsValid)
             {
                 return RedirectToAction("/", "HomeController");
             }
-                                                                                                                                                                                
-            //var createdContactRecord = await this.contactUsService.CreateContactAsync(viewmodel);
 
-            //if (createdContactRecord is null)
-            //{
-            //    return this.Ok(createdContactRecord);
-            //}
+            var createdContactRecord = await this.contactUsService.CreateContactAsync(viewmodel);
+
+            if (createdContactRecord is null)
+            {
+                return this.Ok(createdContactRecord);
+            }
             //create newCOntact.If success
             //contactUsService.CreateContact()
 
