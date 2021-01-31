@@ -1,2 +1,0 @@
-https://www.color-hex.com/  => color codes 
-https://react-select.com/home   => cool react select with lots of optionsmongoexport --uri="mongodb+srv://m001-student:m001-mongodb-basics@Sandbox.mongodb.net/sample_supplies" --collection=sales --out=sales.json
