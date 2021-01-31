@@ -14,10 +14,10 @@ namespace House.Web.Controllers
         private readonly IContactUsService contactUsService;
         private readonly IEmailService emailService;
 
-        public ContactUsController(IContactUsService contactUsService, IEmailService emailService)
-        {
-            this.contactUsService = contactUsService;
-        }
+        //public ContactUsController(IContactUsService contactUsService, IEmailService emailService)
+        //{
+        //    this.contactUsService = contactUsService;
+        //}
 
         [HttpPost]
         public async Task<IActionResult> ContactUs([FromBody] ContactUsViewModel viewmodel)

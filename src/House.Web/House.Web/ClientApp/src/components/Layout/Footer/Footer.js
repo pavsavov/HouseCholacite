@@ -83,7 +83,7 @@ const Footer = () => {
         </Grid>
       </footer>
       <hr />
-      <Box container direction='row'>
+      <Box direction='row'>
         <Grid item md={12} className={classes.botomFooter}>
           &copy;{new Date().getFullYear()} КЪЩА ЧОЛАЦИТЕ | Всички права запазени
           | Общи условия | Лични данни

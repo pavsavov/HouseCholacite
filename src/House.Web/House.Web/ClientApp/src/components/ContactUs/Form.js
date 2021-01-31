@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Button, TextField, Grid, Unstable_TrapFocus } from '@material-ui/core';
+import { Button, TextField, Grid } from '@material-ui/core';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
-import { v4 as uuidv4 } from 'uuid';
 
 const Form = (props) => {
   const initialInputState = {
@@ -16,13 +15,17 @@ const Form = (props) => {
   const { FirstName, LastName, PhoneNumber, Email, Message } = formDataEntry;
 
   const handleInputChange = (e) => {
+    console.log(e);
     updateFormData({ ...formDataEntry, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {
     fetch('https://localhost:44310/api/contact-us', {
       method: 'post',
-      headers: { 'Content-type': 'application/json' },
+      headers: {
+        'Content-type': 'application/json',
+        'Cache-Control': 'max-age=3600',
+      },
       body: JSON.stringify(formDataEntry),
     }).then(
       (response) => {
@@ -36,7 +39,6 @@ const Form = (props) => {
 
   const textFieldPropsAndValues = [
     {
-      id: uuidv4(),
       label: 'Име',
       name: 'FirstName',
       value: FirstName,
@@ -44,7 +46,6 @@ const Form = (props) => {
       className: props.style.styleTextField,
     },
     {
-      id: uuidv4(),
       label: 'Фамилия',
       name: 'LastName',
       value: LastName,
@@ -52,7 +53,6 @@ const Form = (props) => {
       className: props.style.styleTextField,
     },
     {
-      id: uuidv4(),
       label: 'Телефонен номер',
       name: 'PhoneNumber',
       value: PhoneNumber,
@@ -60,7 +60,6 @@ const Form = (props) => {
       className: props.style.styleTextField,
     },
     {
-      id: uuidv4(),
       label: 'Електронна поща',
       name: 'Email',
       value: Email,
@@ -73,9 +72,8 @@ const Form = (props) => {
     <form>
       <Grid container onSubmit={submitHandler} direction='column'>
         <Grid item>
-          {textFieldPropsAndValues.map((textFieldProps) => {
-            const { id, ...propsAndValues } = textFieldProps;
-            return <TextField key={id} {...propsAndValues} />;
+          {textFieldPropsAndValues.map((textFieldProps, index) => {
+            return <TextField key={index} {...textFieldProps} />;
           })}
         </Grid>
         <Grid item>
