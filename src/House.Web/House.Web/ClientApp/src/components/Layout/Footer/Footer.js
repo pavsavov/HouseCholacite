@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
     listStyleType: 'none',
   },
 }));
-
 // rewrite this component using https://material-ui.com/api/table-footer/
 const Footer = () => {
   const classes = useStyles();
@@ -84,7 +83,7 @@ const Footer = () => {
         </Grid>
       </footer>
       <hr />
-      <Box direction='row'>
+      <Box container direction='row'>
         <Grid item md={12} className={classes.botomFooter}>
           &copy;{new Date().getFullYear()} КЪЩА ЧОЛАЦИТЕ | Всички права запазени
           | Общи условия | Лични данни
