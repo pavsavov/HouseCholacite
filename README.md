@@ -1,3 +1,4 @@
 # HouseCholacite
+Guest House Cholacite Web page
 
-Guest house website for learning the React frontend library.
+https://material-ui.com/ - component library
