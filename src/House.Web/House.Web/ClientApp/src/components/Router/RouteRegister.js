@@ -13,9 +13,6 @@ const RouteRegister = () => {
 
       {/* register component once available */}
       <Route exact path='/gallery' component={Gallery} />
-      <Route exact path='/rooms'>
-        и тук няма никой
-      </Route>
       <Route exact path='/about-us' component={AboutUs} />
     </Switch>
   );

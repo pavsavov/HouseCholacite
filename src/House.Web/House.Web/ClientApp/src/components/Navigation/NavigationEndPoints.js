@@ -25,11 +25,6 @@ const NavigationEndPoints = () => {
           Галерия
         </NavLink>
       </NavItem>
-      <NavItem>
-        <NavLink tag={Link} className='text-dark' to='/rooms'>
-          Стаи
-        </NavLink>
-      </NavItem>
     </ul>
   );
 };
