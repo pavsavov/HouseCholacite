@@ -20,7 +20,7 @@ const Map = () => {
     });
 
     const defaultLayers = platform.createDefaultLayers({
-      lg: 'bg',
+      lg: 'bg-BG',
     });
 
     const hMap = new H.Map(mapRef.current, defaultLayers.raster.normal.map, {
@@ -30,13 +30,12 @@ const Map = () => {
     });
 
     const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(hMap));
-
     const ui = H.ui.UI.createDefault(hMap, defaultLayers);
 
-    window.onload = function () {
-      var marker = new H.map.Marker(position);
-      hMap.addObject(marker);
-    };
+    var marker = new H.map.Marker(position);
+
+    hMap.addObject(marker);
+    window.onload = function () {};
     return () => {
       hMap.dispose();
     };

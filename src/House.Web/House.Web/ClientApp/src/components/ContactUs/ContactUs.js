@@ -3,7 +3,7 @@ import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { Form } from './Form';
-import { Map } from '../HEREMap/Map';
+import { Map } from '../Map/Map';
 
 const useStyles = makeStyles((theme) => ({
   root: {
