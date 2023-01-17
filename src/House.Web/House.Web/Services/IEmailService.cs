@@ -10,6 +10,6 @@ namespace House.Web.Services
     {
         Task<bool> SendToAdmin(ContactUsViewModel viewModel);
 
-        Task<bool> ConfirmRecieve(string emailAddress);
+        Task<bool> ConfirmReceive(string emailAddress);
     }
 }

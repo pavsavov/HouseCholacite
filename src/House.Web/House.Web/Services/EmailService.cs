@@ -11,7 +11,7 @@ namespace House.Web.Services
 
         }
 
-        public Task<bool> ConfirmRecieve(string emailAddress)
+        public Task<bool> ConfirmReceive(string emailAddress)
         {
             throw new System.NotImplementedException();
         }

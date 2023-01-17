@@ -60,7 +60,7 @@ const Footer = () => {
             >
               <ul className={classes.listElementStyle}>
                 <h5>Контакти:</h5>
-                <li>телефон: 123456</li>
+                <li>Телефон: 123456</li>
                 <li>e-mail:nadia.lozanova@abv.bg</li>
               </ul>
               <ul className={classes.listElementStyle}>

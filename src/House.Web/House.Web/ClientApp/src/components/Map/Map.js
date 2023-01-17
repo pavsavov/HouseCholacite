@@ -19,11 +19,11 @@ const Map = () => {
       apikey: hereApiKey,
     });
 
-    const defaultLayers = platform.createDefaultLayers({
+    let defaultLayers = platform.createDefaultLayers({
       lg: 'bg-BG',
     });
 
-    const hMap = new H.Map(mapRef.current, defaultLayers.raster.normal.map, {
+    const hMap = new H.Map(mapRef.current, defaultLayers.vector.normal.map, {
       center: position,
       zoom: 14,
       pixelRation: window.devicePixelRatio || 1,
